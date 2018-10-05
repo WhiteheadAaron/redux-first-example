@@ -4,6 +4,16 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import store from './store';
+import { increment } from './actions';
+import { decrement } from './actions';
+
+console.log(store.getState());
+store.dispatch(increment(5));
+console.log(store.getState());
+store.dispatch(decrement(3));
+console.log(store.getState());
+
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
